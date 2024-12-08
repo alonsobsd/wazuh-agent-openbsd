@@ -5,7 +5,7 @@ This is a initial try to port Wazuh agent to OpenBSD. It needs testing because i
 
 ## How can test it?
 
-### Preparing of the environment
+### Pre-installation tasks
 
 Install wazuh-agent dependencies from packages
 ```sh
