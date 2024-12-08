@@ -1,6 +1,8 @@
 # wazuh-agent-openbsd
 This is a initial try to port Wazuh agent to OpenBSD. It needs testing because it could not work correctly yet. I hope it helps another users or developers interested on test wazuh on OpenBSD.
 
+![image](https://github.com/user-attachments/assets/c36b7d10-aec8-4a33-bd5a-bac60e4cb6f6)
+
 ## How can test it?
 
 ### Preparing of the environment
