@@ -43,6 +43,15 @@ If an entry with id 900 exists, use other number (901, 902, etc). Don't forget c
 @newgroup _wazuh:900
 @newuser _wazuh:900:_wazuh::Wazuh Owner:/var/ossec:/sbin/nologin
 ```
+Finally, add inotify library path to shared library cache
+
+```sh
+vi /etc/rc.conf.local
+```
+```sh
+shlib_dirs="/usr/local/lib/inotify"
+```
+
 ### Compiling and installing
 
 ```sh
