@@ -59,3 +59,4 @@ WRKOBJDIR=/home/user/ports/obj/ports
 DISTDIR=/home/user/ports/distfiles
 PACKAGE_REPOSITORY=/home/user/ports/packages
 ```
+**Wazuh agent version: 4.9.2**
