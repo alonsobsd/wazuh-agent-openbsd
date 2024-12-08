@@ -1,0 +1,16 @@
+Index: src/data_provider/src/sysInfoOpenBSD.cpp
+--- src/data_provider/src/sysInfoOpenBSD.cpp.orig
++++ src/data_provider/src/sysInfoOpenBSD.cpp
+@@ -195,10 +195,11 @@ nlohmann::json SysInfo::getOsInfo() const
+ 
+     if (!spParser->parseUname(Utils::exec("uname -r"), ret))
+     {
+-        ret["os_name"] = "BSD";
+         ret["os_platform"] = "bsd";
+         ret["os_version"] = UNKNOWN_VALUE;
+     }
++
++    ret["os_name"] = "OpenBSD";
+ 
+     if (uname(&uts) >= 0)
+     {

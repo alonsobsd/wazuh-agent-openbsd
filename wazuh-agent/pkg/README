@@ -1,0 +1,40 @@
++-----------------------------------------------------------------------
+| Running ${PKGSTEM} on OpenBSD
++-----------------------------------------------------------------------
+
+libinotify requeriment
+===============================
+
+Wazuh agent on OpenBSD include FIM support using libinotify library.
+libinotify directory path is no added by default on OpenBSD. You must
+add the following to /etc/rc.conf.local file
+
+shlib_dirs=/usr/local/lib/inotify
+
+Configurating Wazuh Agent
+===============================
+
+Configuration sample files are located at /var/ossec/etc. You need some
+minimal settings for run it.
+
+# cp /etc/localtime /var/ossec/etc
+
+# cp /var/ossec/etc/ossec.conf.sample /var/ossec/etc/ossec.conf
+# chmod 660 /var/ossec/etc/ossec.conf
+# chown root:_wazuh
+
+Don't forget modify ossec.conf file accord to your own needs
+
+# touch /var/ossec/etc/client.keys
+# chmod 660 /var/ossec/etc/client.keys
+# chown _wazuh:_wazuh /var/ossec/etc/client.keys
+
+If you want run wazuh-agent on startup add the following to /etc/rc.local
+
+/var/ossec/bin/wazuh-control start
+
+You can find additional useful files installed at
+
+# /var/ossec/packages_files/agent_installation_scripts
+
+Enjoy it :)

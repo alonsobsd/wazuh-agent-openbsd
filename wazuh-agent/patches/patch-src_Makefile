@@ -1,0 +1,45 @@
+Index: src/Makefile
+--- src/Makefile.orig
++++ src/Makefile
+@@ -49,9 +49,11 @@ endif
+ 
+ HAS_CHECKMODULE = $(shell command -v checkmodule > /dev/null && echo YES)
+ HAS_SEMODULE_PACKAGE = $(shell command -v semodule_package > /dev/null && echo YES)
++ifeq (${uname_S},Linux)
+ CHECK_ARCHLINUX := $(shell sh -c 'grep "Arch Linux" /etc/os-release > /dev/null && echo YES || echo not')
+ CHECK_CENTOS5 := $(shell sh -c 'grep "CentOS release 5." /etc/redhat-release 2>&1 > /dev/null && echo YES || echo not')
+ CHECK_ALPINE := $(shell sh -c 'grep "Alpine Linux" /etc/os-release 2>&1 > /dev/null && echo YES || echo not')
++endif
+ 
+ ARCH_FLAGS =
+ 
+@@ -109,7 +111,7 @@ SYSCHECK=syscheckd/
+ USE_PRELUDE?=no
+ USE_ZEROMQ?=no
+ USE_GEOIP?=no
+-USE_INOTIFY=no
++USE_INOTIFY?=no
+ USE_BIG_ENDIAN=no
+ USE_AUDIT=no
+ MINGW_HOST=unknown
+@@ -507,6 +509,11 @@ ifneq (,$(filter ${USE_INOTIFY},YES auto yes y Y 1))
+ 		OSSEC_LIBS+=-linotify
+ 		OSSEC_CFLAGS+=-I/usr/local/include
+ 	endif
++        ifeq (${uname_S},OpenBSD)
++                OSSEC_LDFLAGS+=-I/usr/local/include/inotify -L/usr/local/lib/inotify/
++                OSSEC_LIBS+=-L/usr/local/lib/inotify/ -linotify
++                OSSEC_CFLAGS+=-I/usr/local/include/inotify
++        endif
+ endif
+ 
+ ifneq (,$(filter ${USE_BIG_ENDIAN},YES yes y Y 1))
+@@ -2236,7 +2243,7 @@ librootcheck.a: ${rootcheck_o_lib}
+ #### FIM ######
+ 
+ wazuh-syscheckd: librootcheck.a libwazuh.a ${WAZUHEXT_LIB} build_shared_modules
+-	cd syscheckd && mkdir -p build && cd build && cmake ${CMAKE_OPTS} -DCMAKE_C_FLAGS="${DEFINES} -pipe -Wall -Wextra -std=gnu99" ${SYSCHECK_TEST} ${SYSCHECK_RELEASE_TYPE} .. && ${MAKE}
++	cd syscheckd && mkdir -p build && cd build && cmake ${CMAKE_OPTS} -DCMAKE_C_FLAGS="${DEFINES} ${OSSEC_CFLAGS}  -pipe -Wall -Wextra -std=gnu99" -DCMAKE_EXE_LINKER_FLAGS="${OSSEC_LDFLAGS} ${OSSEC_LIBS}" ${SYSCHECK_TEST} ${SYSCHECK_RELEASE_TYPE} .. && ${MAKE}
+ 
+ #### Monitor #######
+ 

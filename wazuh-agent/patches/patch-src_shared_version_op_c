@@ -1,0 +1,24 @@
+Index: src/shared/version_op.c
+--- src/shared/version_op.c.orig
++++ src/shared/version_op.c
+@@ -832,7 +832,9 @@ os_info *get_unix_version()
+                 } else if (strcmp(strtok_r(buff, "\n", &save_ptr),"OpenBSD") == 0 ||
+                         strcmp(strtok_r(buff, "\n", &save_ptr),"NetBSD")  == 0 ||
+                         strcmp(strtok_r(buff, "\n", &save_ptr),"FreeBSD") == 0 ){ // BSD
++#if !defined(__OpenBSD__)
+                     info->os_name = strdup("BSD");
++#endif
+                     info->os_platform = strdup("bsd");
+ 
+                     memset(full_cmd, '\0', OS_MAXSTR);
+@@ -897,6 +899,10 @@ os_info *get_unix_version()
+     }
+ 
+     if (uname(&uts_buf) >= 0) {
++#if defined(__OpenBSD__)
++        info->os_platform = strdup("openbsd");
++        os_strdup(uts_buf.sysname, info->os_name);
++#endif
+         os_strdup(uts_buf.sysname, info->sysname);
+         os_strdup(uts_buf.nodename, info->nodename);
+         os_strdup(uts_buf.release, info->release);

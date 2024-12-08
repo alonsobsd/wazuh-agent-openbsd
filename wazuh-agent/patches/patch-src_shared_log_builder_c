@@ -1,0 +1,12 @@
+Index: src/shared/log_builder.c
+--- src/shared/log_builder.c.orig
++++ src/shared/log_builder.c
+@@ -283,7 +283,7 @@ int log_builder_update_host_ip(log_builder_t * builder
+     }
+     rwlock_lock_write(&builder->rwlock);
+     if (*host_ip != '\0' && strcmp(host_ip, "Err")) {
+-        strcpy(builder->host_ip, host_ip);
++        strlcpy(builder->host_ip, host_ip, sizeof(builder->host_ip));
+     } else {
+         strncpy(builder->host_ip, "0.0.0.0", IPSIZE - 1);
+     }

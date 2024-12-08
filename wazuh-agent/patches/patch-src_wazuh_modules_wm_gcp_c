@@ -1,0 +1,39 @@
+Index: src/wazuh_modules/wm_gcp.c
+--- src/wazuh_modules/wm_gcp.c.orig
++++ src/wazuh_modules/wm_gcp.c
+@@ -273,7 +273,7 @@ void wm_gcp_pubsub_run(const wm_gcp_pubsub *data) {
+     if (data->max_messages) {
+         char *int_to_string;
+         os_malloc(OS_SIZE_1024, int_to_string);
+-        sprintf(int_to_string, "%d", data->max_messages);
++        snprintf(int_to_string, sizeof(int_to_string), "%d", data->max_messages);
+         wm_strcat(&command, "--max_messages", ' ');
+         wm_strcat(&command, int_to_string, ' ');
+         os_free(int_to_string);
+@@ -281,7 +281,7 @@ void wm_gcp_pubsub_run(const wm_gcp_pubsub *data) {
+     if (data->num_threads) {
+         char *int_to_string;
+         os_malloc(OS_SIZE_1024, int_to_string);
+-        sprintf(int_to_string, "%d", data->num_threads);
++        snprintf(int_to_string, sizeof(int_to_string), "%d", data->num_threads);
+         wm_strcat(&command, "--num_threads", ' ');
+         wm_strcat(&command, int_to_string, ' ');
+         os_free(int_to_string);
+@@ -290,7 +290,7 @@ void wm_gcp_pubsub_run(const wm_gcp_pubsub *data) {
+     if (isDebug()){
+         char *int_to_string;
+         os_malloc(OS_SIZE_1024, int_to_string);
+-        sprintf(int_to_string, "%d", isDebug());
++        snprintf(int_to_string, sizeof(int_to_string), "%d", isDebug());
+         wm_strcat(&command, "--log_level", ' ');
+         wm_strcat(&command, int_to_string, ' ');
+         os_free(int_to_string);
+@@ -413,7 +413,7 @@ void wm_gcp_bucket_run(wm_gcp_bucket *exec_bucket) {
+     if (isDebug()){
+         char *int_to_string;
+         os_malloc(OS_SIZE_1024, int_to_string);
+-        sprintf(int_to_string, "%d", isDebug());
++        snprintf(int_to_string, sizeof(int_to_string), "%d", isDebug());
+         wm_strcat(&command, "--log_level", ' ');
+         wm_strcat(&command, int_to_string, ' ');
+         os_free(int_to_string);

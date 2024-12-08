@@ -1,0 +1,12 @@
+Index: src/os_crypto/shared/msgs.c
+--- src/os_crypto/shared/msgs.c.orig
++++ src/os_crypto/shared/msgs.c
+@@ -603,7 +603,7 @@ size_t CreateSecMSG(const keystore *keys, const char *
+     OS_MD5_Str(_tmpmsg, length, md5sum);
+ 
+     /* Generate final msg to be compressed: <md5sum><_tmpmsg> */
+-    strcpy(_finmsg, md5sum);
++    strlcpy(_finmsg, md5sum, sizeof(_finmsg));
+     memcpy(_finmsg + 32, _tmpmsg, length);
+     length += 32;
+ 

@@ -1,0 +1,11 @@
+Index: src/addagent/validate.c
+--- src/addagent/validate.c.orig
++++ src/addagent/validate.c
+@@ -673,6 +673,6 @@ void FormatID(char *id) {
+         number = strtol(id, &end, 10);
+ 
+         if (!*end)
+-            sprintf(id, "%03d", number);
++            snprintf(id, sizeof(id), "%03d", number);
+     }
+ }

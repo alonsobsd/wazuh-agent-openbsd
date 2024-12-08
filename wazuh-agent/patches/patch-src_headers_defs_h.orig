@@ -1,0 +1,27 @@
+Index: src/headers/defs.h
+--- src/headers/defs.h.orig
++++ src/headers/defs.h
+@@ -95,15 +95,23 @@ https://www.gnu.org/licenses/gpl.html\n"
+ 
+ /* User Configuration */
+ #ifndef USER
++#if defined(__OpenBSD__)
++#define USER            "_wazuh"
++#else
+ #define USER            "wazuh"
+ #endif
++#endif
+ 
+ #ifndef ROOTUSER
+ #define ROOTUSER        "root"
+ #endif
+ 
+ #ifndef GROUPGLOBAL
++#if defined(__OpenBSD__)
++#define GROUPGLOBAL     "_wazuh"
++#else
+ #define GROUPGLOBAL     "wazuh"
++#endif
+ #endif
+ 
+ // Standard super user UID and GID

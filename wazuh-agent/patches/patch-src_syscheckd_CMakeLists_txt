@@ -1,0 +1,16 @@
+Index: src/syscheckd/CMakeLists.txt
+--- src/syscheckd/CMakeLists.txt.orig
++++ src/syscheckd/CMakeLists.txt
+@@ -86,7 +86,11 @@ endif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+ target_link_libraries(wazuh-syscheckd fimdb wazuhext pthread wazuh rootcheck)
+ 
+ if (UNIX)
+-    target_link_libraries(wazuh-syscheckd dl)
++    if (CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
++      target_link_libraries(wazuh-syscheckd)
++    else()
++      target_link_libraries(wazuh-syscheckd dl)
++    endif()
+     if (NOT APPLE)
+         if (CMAKE_SYSTEM_NAME STREQUAL "SunOS")
+             target_link_libraries(wazuh-syscheckd socket nsl resolv rt)

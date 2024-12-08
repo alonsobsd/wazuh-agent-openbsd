@@ -1,0 +1,12 @@
+Index: src/shared/mem_op.c
+--- src/shared/mem_op.c.orig
++++ src/shared/mem_op.c
+@@ -109,7 +109,7 @@ char *os_LoadString(char *at, const char *str)
+         }
+         at = newat;
+ 
+-        strcat(at, str);
++        strlcat(at, str, sizeof(at));
+         return (at);
+     }
+ 

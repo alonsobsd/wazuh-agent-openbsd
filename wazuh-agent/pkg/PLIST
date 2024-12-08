@@ -1,0 +1,585 @@
+@newgroup _wazuh:900
+@newuser _wazuh:900:_wazuh::Wazuh Owner:/var/ossec:/sbin/nologin
+@owner _wazuh
+@group _wazuh
+ossec/
+@owner root
+@group _wazuh
+ossec/active-response/
+ossec/active-response/bin/
+@bin ossec/active-response/bin/default-firewall-drop
+@bin ossec/active-response/bin/disable-account
+@bin ossec/active-response/bin/firewall-drop
+@bin ossec/active-response/bin/firewalld-drop
+@bin ossec/active-response/bin/host-deny
+@bin ossec/active-response/bin/ip-customblock
+@bin ossec/active-response/bin/ipfw
+@bin ossec/active-response/bin/kaspersky
+ossec/active-response/bin/kaspersky.py
+@bin ossec/active-response/bin/npf
+@bin ossec/active-response/bin/pf
+@bin ossec/active-response/bin/restart-wazuh
+ossec/active-response/bin/restart.sh
+@bin ossec/active-response/bin/route-null
+@bin ossec/active-response/bin/wazuh-slack
+@owner root
+@group _wazuh
+ossec/agentless/
+ossec/agentless/main.exp
+ossec/agentless/register_host.sh
+ossec/agentless/ssh.exp
+ossec/agentless/ssh_asa-fwsmconfig_diff
+ossec/agentless/ssh_foundry_diff
+ossec/agentless/ssh_generic_diff
+ossec/agentless/ssh_integrity_check_bsd
+ossec/agentless/ssh_integrity_check_linux
+ossec/agentless/ssh_nopass.exp
+ossec/agentless/ssh_pixconfig_diff
+ossec/agentless/sshlogin.exp
+ossec/agentless/su.exp
+ossec/backup/
+ossec/bin/
+@bin ossec/bin/agent-auth
+@bin ossec/bin/manage_agents
+@bin ossec/bin/wazuh-agentd
+ossec/bin/wazuh-control
+@bin ossec/bin/wazuh-execd
+@bin ossec/bin/wazuh-logcollector
+@bin ossec/bin/wazuh-modulesd
+@bin ossec/bin/wazuh-syscheckd
+@mode 640
+@owner root
+@group _wazuh
+ossec/etc/client.keys.sample
+ossec/etc/internal_options.conf
+ossec/etc/local_internal_options.conf.sample
+ossec/etc/localtime
+@mode 770
+@owner root
+@group _wazuh
+ossec/etc/
+ossec/etc/shared/
+ossec/etc/shared/default/
+@mode 750
+@owner root
+@group _wazuh
+ossec/lib/
+@mode 660
+@owner root
+@group _wazuh
+ossec/etc/ossec.conf.sample
+ossec/etc/shared/cis_apache2224_rcl.txt
+ossec/etc/shared/cis_debian_linux_rcl.txt
+ossec/etc/shared/cis_mysql5-6_community_rcl.txt
+ossec/etc/shared/cis_mysql5-6_enterprise_rcl.txt
+ossec/etc/shared/cis_rhel5_linux_rcl.txt
+ossec/etc/shared/cis_rhel6_linux_rcl.txt
+ossec/etc/shared/cis_rhel7_linux_rcl.txt
+ossec/etc/shared/cis_rhel_linux_rcl.txt
+ossec/etc/shared/cis_sles11_linux_rcl.txt
+ossec/etc/shared/cis_sles12_linux_rcl.txt
+ossec/etc/shared/cis_win2012r2_domainL1_rcl.txt
+ossec/etc/shared/cis_win2012r2_domainL2_rcl.txt
+ossec/etc/shared/cis_win2012r2_memberL1_rcl.txt
+ossec/etc/shared/cis_win2012r2_memberL2_rcl.txt
+ossec/etc/shared/default/cis_apache2224_rcl.txt
+ossec/etc/shared/default/cis_debian_linux_rcl.txt
+ossec/etc/shared/default/cis_mysql5-6_community_rcl.txt
+ossec/etc/shared/default/cis_mysql5-6_enterprise_rcl.txt
+ossec/etc/shared/default/cis_rhel5_linux_rcl.txt
+ossec/etc/shared/default/cis_rhel6_linux_rcl.txt
+ossec/etc/shared/default/cis_rhel7_linux_rcl.txt
+ossec/etc/shared/default/cis_rhel_linux_rcl.txt
+ossec/etc/shared/default/cis_sles11_linux_rcl.txt
+ossec/etc/shared/default/cis_sles12_linux_rcl.txt
+ossec/etc/shared/default/cis_win2012r2_domainL1_rcl.txt
+ossec/etc/shared/default/cis_win2012r2_domainL2_rcl.txt
+ossec/etc/shared/default/cis_win2012r2_memberL1_rcl.txt
+ossec/etc/shared/default/cis_win2012r2_memberL2_rcl.txt
+ossec/etc/shared/default/rootkit_files.txt
+ossec/etc/shared/default/rootkit_trojans.txt
+ossec/etc/shared/default/system_audit_rcl.txt
+ossec/etc/shared/default/system_audit_ssh.txt
+ossec/etc/shared/default/win_applications_rcl.txt
+ossec/etc/shared/default/win_audit_rcl.txt
+ossec/etc/shared/default/win_malware_rcl.txt
+ossec/etc/shared/rootkit_files.txt
+ossec/etc/shared/rootkit_trojans.txt
+ossec/etc/shared/system_audit_rcl.txt
+ossec/etc/shared/system_audit_ssh.txt
+ossec/etc/shared/win_applications_rcl.txt
+ossec/etc/shared/win_audit_rcl.txt
+ossec/etc/shared/win_malware_rcl.txt
+ossec/etc/wpk_root.pem
+@mode 750
+@owner root
+@group _wazuh
+@so ossec/lib/libdbsync.so
+@so ossec/lib/libfimdb.so
+@so ossec/lib/librsync.so
+@so ossec/lib/libsyscollector.so
+@so ossec/lib/libsysinfo.so
+@so ossec/lib/libwazuhext.so
+@so ossec/lib/libwazuhshared.so
+@owner _wazuh
+@group _wazuh
+ossec/logs/
+ossec/logs/wazuh/
+@owner root
+@group _wazuh
+ossec/packages_files/
+ossec/packages_files/agent_installation_scripts/
+ossec/packages_files/agent_installation_scripts/add_localfiles.sh
+ossec/packages_files/agent_installation_scripts/etc/
+ossec/packages_files/agent_installation_scripts/etc/templates/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/HP-UX/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/HP-UX/localfile-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/HP-UX/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/HP-UX/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/README.md
+ossec/packages_files/agent_installation_scripts/etc/templates/config/aix/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/aix/localfile-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/aix/syscheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/aix/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/8/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/9/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/9/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/almalinux/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/alpine/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/alpine/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/1/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/1/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/localfile-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/5/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/5/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/5/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/5/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/6/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/6/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/6/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/6/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/7/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/7/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/7/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/7/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/8/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/8/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/8/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/localfile-extra.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/16/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/16/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/17/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/17/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/18/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/18/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/19/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/19/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/20/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/20/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/21/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/21/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/22/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/22/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/23/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/23/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/24/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/localfile-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/localfile-extra.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/sca.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/syscheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/syscheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/10/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/10/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/10/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/10/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/11/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/11/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/12/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/12/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/7/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/7/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/8/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/9/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/9/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/debian/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/29/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/29/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/30/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/30/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/31/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/31/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/32/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/32/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/33/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/33/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/34/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/34/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/fedora/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/alerts.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/ar-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/ar-definitions.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/auth.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/cluster.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/global-ar.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/global.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/header-comments.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-commands.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/apache-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/audit-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/ossec-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/pgsql-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/snort-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/localfile-logs/syslog-logs.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/logging.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/osquery.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/remote-secure.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/rule_test.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/rules.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/sca.manager.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/sca.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/syscheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/syscheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-ciscat.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-indexer.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-vulnerability-detection.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/6/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/6/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/6/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/6/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/7/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/7/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/7/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/7/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/8/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/9/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/8/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/9/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/9/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/rocky/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/11/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/11/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/11/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/11/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/12/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/12/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/12/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/12/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/15/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/15/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/15/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/15/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sles/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/5/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/5/11/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/5/11.4/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/5/11.4/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/5/11/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/sunos/wodle-syscollector.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/11/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/11/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/11/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/11/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/12/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/12/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/12/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/12/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/15/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/15/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/15/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/15/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/suse/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/12/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/12/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/12/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/14/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/14/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/14/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/16/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/16/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/16/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/18/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/18/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/18/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/20/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/20/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/20/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/22/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/22/04/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/22/04/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/rootcheck.agent.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/rootcheck.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ubuntu/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/10/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/10/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2003/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2003/localfile-events.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2003/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2003/syscheck.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2008/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2008/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2008R2/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2008R2/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2012/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2012/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2012R2/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2012R2/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2016/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2016/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2019/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/2019/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/7/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/7/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/8/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/8.1/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/8.1/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/8/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/Vista/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/Vista/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/xp/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/xp/localfile-events.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/xp/profile.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/windows/xp/syscheck.template
+ossec/packages_files/agent_installation_scripts/gen_ossec.sh
+ossec/packages_files/agent_installation_scripts/sca/
+ossec/packages_files/agent_installation_scripts/sca/almalinux/
+ossec/packages_files/agent_installation_scripts/sca/almalinux/cis_alma_linux_8.yml
+ossec/packages_files/agent_installation_scripts/sca/almalinux/cis_alma_linux_9.yml
+ossec/packages_files/agent_installation_scripts/sca/amazon/
+ossec/packages_files/agent_installation_scripts/sca/amazon/cis_amazon_linux_1.yml
+ossec/packages_files/agent_installation_scripts/sca/amazon/cis_amazon_linux_2.yml
+ossec/packages_files/agent_installation_scripts/sca/amazon/cis_amazon_linux_2023.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_apache_24.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_iis_10.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_mysql5-6_community.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_mysql5-6_enterprise.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_postgre-sql-13.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_sqlserver_2012.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_sqlserver_2014.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_sqlserver_2016.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_sqlserver_2017.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/cis_sqlserver_2019.yml
+ossec/packages_files/agent_installation_scripts/sca/applications/web_vulnerabilities.yml
+ossec/packages_files/agent_installation_scripts/sca/centos/
+ossec/packages_files/agent_installation_scripts/sca/centos/6/
+ossec/packages_files/agent_installation_scripts/sca/centos/6/cis_centos6_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/centos/7/
+ossec/packages_files/agent_installation_scripts/sca/centos/7/cis_centos7_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/centos/8/
+ossec/packages_files/agent_installation_scripts/sca/centos/8/cis_centos8_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/
+ossec/packages_files/agent_installation_scripts/sca/darwin/15/
+ossec/packages_files/agent_installation_scripts/sca/darwin/15/cis_apple_macOS_10.11.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/16/
+ossec/packages_files/agent_installation_scripts/sca/darwin/16/cis_apple_macOS_10.12.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/17/
+ossec/packages_files/agent_installation_scripts/sca/darwin/17/cis_apple_macOS_10.13.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/18/
+ossec/packages_files/agent_installation_scripts/sca/darwin/18/cis_apple_macOS_10.14.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/19/
+ossec/packages_files/agent_installation_scripts/sca/darwin/19/cis_apple_macOS_10.15.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/20/
+ossec/packages_files/agent_installation_scripts/sca/darwin/20/cis_apple_macOS_11.1.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/21/
+ossec/packages_files/agent_installation_scripts/sca/darwin/21/cis_apple_macOS_12.0.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/22/
+ossec/packages_files/agent_installation_scripts/sca/darwin/22/cis_apple_macOS_13.x.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/23/
+ossec/packages_files/agent_installation_scripts/sca/darwin/23/cis_apple_macOS_14.x.yml
+ossec/packages_files/agent_installation_scripts/sca/darwin/24/
+ossec/packages_files/agent_installation_scripts/sca/darwin/24/cis_apple_macOS_15.x.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian10.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian11.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian12.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian7.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian8.yml
+ossec/packages_files/agent_installation_scripts/sca/debian/cis_debian9.yml
+ossec/packages_files/agent_installation_scripts/sca/generic/
+ossec/packages_files/agent_installation_scripts/sca/generic/sca_unix_audit.yml
+ossec/packages_files/agent_installation_scripts/sca/hpux/
+ossec/packages_files/agent_installation_scripts/sca/hpux/cis_hpux_11i.yml
+ossec/packages_files/agent_installation_scripts/sca/hpux/cis_hpux_11i_bastille.yml
+ossec/packages_files/agent_installation_scripts/sca/mongodb/
+ossec/packages_files/agent_installation_scripts/sca/mongodb/cis_mongodb_36.yml
+ossec/packages_files/agent_installation_scripts/sca/nginx/
+ossec/packages_files/agent_installation_scripts/sca/nginx/cis_nginx_1.yml
+ossec/packages_files/agent_installation_scripts/sca/ol/
+ossec/packages_files/agent_installation_scripts/sca/ol/9/
+ossec/packages_files/agent_installation_scripts/sca/ol/9/cis_oracle_linux_9.yml
+ossec/packages_files/agent_installation_scripts/sca/oracledb/
+ossec/packages_files/agent_installation_scripts/sca/oracledb/cis_oracle_database_19c.yml
+ossec/packages_files/agent_installation_scripts/sca/rhel/
+ossec/packages_files/agent_installation_scripts/sca/rhel/5/
+ossec/packages_files/agent_installation_scripts/sca/rhel/5/cis_rhel5_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/rhel/6/
+ossec/packages_files/agent_installation_scripts/sca/rhel/6/cis_rhel6_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/rhel/7/
+ossec/packages_files/agent_installation_scripts/sca/rhel/7/cis_rhel7_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/rhel/8/
+ossec/packages_files/agent_installation_scripts/sca/rhel/8/cis_rhel8_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/rhel/9/
+ossec/packages_files/agent_installation_scripts/sca/rhel/9/cis_rhel9_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/rocky/
+ossec/packages_files/agent_installation_scripts/sca/rocky/cis_rocky_linux_8.yml
+ossec/packages_files/agent_installation_scripts/sca/rocky/cis_rocky_linux_9.yml
+ossec/packages_files/agent_installation_scripts/sca/sles/
+ossec/packages_files/agent_installation_scripts/sca/sles/11/
+ossec/packages_files/agent_installation_scripts/sca/sles/11/cis_sles11_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/sles/12/
+ossec/packages_files/agent_installation_scripts/sca/sles/12/cis_sles12_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/sles/15/
+ossec/packages_files/agent_installation_scripts/sca/sles/15/cis_sles15_linux.yml
+ossec/packages_files/agent_installation_scripts/sca/sunos/
+ossec/packages_files/agent_installation_scripts/sca/sunos/cis_solaris11.4.yml
+ossec/packages_files/agent_installation_scripts/sca/sunos/cis_solaris11.yml
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu14-04.yml
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu16-04.yml
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu18-04.yml
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu20-04.yml
+ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu22-04.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win10_enterprise.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win11_enterprise.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2012r2.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2016.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2019.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2022.yml
+ossec/packages_files/agent_installation_scripts/src/
+ossec/packages_files/agent_installation_scripts/src/init/
+ossec/packages_files/agent_installation_scripts/src/init/adduser.sh
+ossec/packages_files/agent_installation_scripts/src/init/darwin-addusers.sh
+ossec/packages_files/agent_installation_scripts/src/init/darwin-delete-oldusers.sh
+ossec/packages_files/agent_installation_scripts/src/init/darwin-init.sh
+ossec/packages_files/agent_installation_scripts/src/init/delete-oldusers.sh
+ossec/packages_files/agent_installation_scripts/src/init/dist-detect.sh
+ossec/packages_files/agent_installation_scripts/src/init/functions.sh
+ossec/packages_files/agent_installation_scripts/src/init/fw-check.sh
+ossec/packages_files/agent_installation_scripts/src/init/init.sh
+ossec/packages_files/agent_installation_scripts/src/init/inst-functions.sh
+ossec/packages_files/agent_installation_scripts/src/init/language.sh
+ossec/packages_files/agent_installation_scripts/src/init/pkg_installer.sh
+ossec/packages_files/agent_installation_scripts/src/init/register_configure_agent.sh
+ossec/packages_files/agent_installation_scripts/src/init/replace_manager_ip.sh
+ossec/packages_files/agent_installation_scripts/src/init/shared.sh
+ossec/packages_files/agent_installation_scripts/src/init/template-select.sh
+ossec/packages_files/agent_installation_scripts/src/init/templates/
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-aix.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-debian.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-gentoo.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-hpux.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-rh.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-solaris.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids-suse.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/ossec-hids.init
+ossec/packages_files/agent_installation_scripts/src/init/templates/wazuh-agent.service
+ossec/packages_files/agent_installation_scripts/src/init/templates/wazuh-manager.service
+ossec/packages_files/agent_installation_scripts/src/init/update-indexer.sh
+ossec/packages_files/agent_installation_scripts/src/init/update.sh
+ossec/packages_files/agent_installation_scripts/src/init/wazuh/
+ossec/packages_files/agent_installation_scripts/src/init/wazuh-client.sh
+ossec/packages_files/agent_installation_scripts/src/init/wazuh-local.sh
+ossec/packages_files/agent_installation_scripts/src/init/wazuh-server.sh
+ossec/packages_files/agent_installation_scripts/src/init/wazuh/deprecated_ruleset.txt
+ossec/packages_files/agent_installation_scripts/src/init/wazuh/wazuh.sh
+@owner _wazuh
+@group _wazuh
+ossec/queue/
+ossec/queue/alerts/
+ossec/queue/diff/
+ossec/queue/fim/
+ossec/queue/fim/db/
+ossec/queue/logcollector/
+ossec/queue/rids/
+ossec/queue/sockets/
+ossec/queue/syscollector/
+ossec/queue/syscollector/db/
+ossec/queue/syscollector/norm_config.json
+ossec/ruleset/
+ossec/ruleset/sca/
+ossec/ruleset/sca/sca_unix_audit.yml
+ossec/tmp/
+ossec/var/
+ossec/var/incoming/
+ossec/var/run/
+ossec/var/selinux/
+ossec/var/upgrade/
+@owner _wazuh
+@group _wazuh
+ossec/var/wodles/
+ossec/wodles/
+ossec/wodles/__init__.py
+ossec/wodles/aws/
+ossec/wodles/aws/aws-s3
+ossec/wodles/aws/aws-s3.py
+ossec/wodles/azure/
+ossec/wodles/azure/azure-logs
+ossec/wodles/azure/azure-logs.py
+ossec/wodles/docker/
+ossec/wodles/docker/DockerListener
+ossec/wodles/docker/DockerListener.py
+ossec/wodles/gcloud/
+ossec/wodles/gcloud/buckets/
+ossec/wodles/gcloud/buckets/access_logs.py
+ossec/wodles/gcloud/buckets/bucket.py
+ossec/wodles/gcloud/exceptions.py
+ossec/wodles/gcloud/gcloud
+ossec/wodles/gcloud/gcloud.py
+ossec/wodles/gcloud/integration.py
+ossec/wodles/gcloud/pubsub/
+ossec/wodles/gcloud/pubsub/subscriber.py
+ossec/wodles/gcloud/tools.py
+ossec/wodles/utils.py
