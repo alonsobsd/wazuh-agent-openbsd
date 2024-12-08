@@ -1,9 +1,9 @@
 # wazuh-agent-openbsd
-Wazuh agent port for OpenBSD
+This is a initial try to port Wazuh agent to OpenBSD. It needs testing because it could not work correctly yet. I hope it helps another users or developers interested on test wazuh on OpenBSD.
 
 ## How can test it?
 
-### Preparing environment
+### Preparing of the environment
 
 Install wazuh-agent dependencies from packages
 ```sh
@@ -45,4 +45,17 @@ If an entry with id 900 exists, use other number (901, 902, etc). Don't forget c
 
 ```sh
 cd /usr/ports/security/wazuh-agent && make install clean
+```
+### Notes
+
+If you want change default ports paths to test it from another ports directory, you can set the following:
+
+```sh
+vi /etc/mk.conf
+```
+```sh
+PORTSDIR=/home/user/ports
+WRKOBJDIR=/home/user/ports/obj/ports
+DISTDIR=/home/user/ports/distfiles
+PACKAGE_REPOSITORY=/home/user/ports/packages
 ```
