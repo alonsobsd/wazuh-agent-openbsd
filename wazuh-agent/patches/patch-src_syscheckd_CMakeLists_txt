@@ -1,7 +1,7 @@
 Index: src/syscheckd/CMakeLists.txt
 --- src/syscheckd/CMakeLists.txt.orig
 +++ src/syscheckd/CMakeLists.txt
-@@ -86,7 +86,11 @@ endif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+@@ -90,7 +90,11 @@ endif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
  target_link_libraries(wazuh-syscheckd fimdb wazuhext pthread wazuh rootcheck)
  
  if (UNIX)

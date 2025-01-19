@@ -22,7 +22,7 @@ Index: src/Makefile
  USE_BIG_ENDIAN=no
  USE_AUDIT=no
  MINGW_HOST=unknown
-@@ -507,6 +509,11 @@ ifneq (,$(filter ${USE_INOTIFY},YES auto yes y Y 1))
+@@ -534,6 +536,11 @@ ifneq (,$(filter ${USE_INOTIFY},YES auto yes y Y 1))
  		OSSEC_LIBS+=-linotify
  		OSSEC_CFLAGS+=-I/usr/local/include
  	endif
@@ -34,7 +34,16 @@ Index: src/Makefile
  endif
  
  ifneq (,$(filter ${USE_BIG_ENDIAN},YES yes y Y 1))
-@@ -2236,7 +2243,7 @@ librootcheck.a: ${rootcheck_o_lib}
+@@ -958,6 +965,8 @@ else ifeq (${uname_S},Linux)
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
+ else ifeq (${uname_S},Darwin)
+ 	EXTERNAL_LIBS += $(LIBCURL_LIB)
++else ifeq (${uname_S},OpenBSD)
++	EXTERNAL_LIBS += $(LIBCURL_LIB)
+ endif
+ 
+ # Adding libraries only for server
+@@ -2263,7 +2272,7 @@ librootcheck.a: ${rootcheck_o_lib}
  #### FIM ######
  
  wazuh-syscheckd: librootcheck.a libwazuh.a ${WAZUHEXT_LIB} build_shared_modules

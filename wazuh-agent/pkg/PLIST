@@ -1,5 +1,5 @@
 @newgroup _wazuh:900
-@newuser _wazuh:900:_wazuh::Wazuh Owner:/var/ossec:/sbin/nologin
+@newuser _wazuh:900:_wazuh::Wazuh Owner:${PREFIX}/ossec:/sbin/nologin
 @owner _wazuh
 @group _wazuh
 ossec/
@@ -155,6 +155,8 @@ ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/1/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/1/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2023/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/amzn/2023/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/localfile-commands.template
 ossec/packages_files/agent_installation_scripts/etc/templates/config/bsd/wodle-syscollector.template
@@ -180,8 +182,8 @@ ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/root
 ossec/packages_files/agent_installation_scripts/etc/templates/config/centos/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/
-ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/localfile-extra.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/15/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/16/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/16/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/17/
@@ -198,6 +200,7 @@ ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/22/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/22/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/23/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/23/sca.files
+ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/24/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/24/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/localfile-commands.template
 ossec/packages_files/agent_installation_scripts/etc/templates/config/darwin/localfile-extra.template
@@ -273,6 +276,9 @@ ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wod
 ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-indexer.manager.template
 ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-syscollector.template
 ossec/packages_files/agent_installation_scripts/etc/templates/config/generic/wodle-vulnerability-detection.manager.template
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ol/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ol/9/
+ossec/packages_files/agent_installation_scripts/etc/templates/config/ol/9/sca.files
 ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/
 ossec/packages_files/agent_installation_scripts/etc/templates/config/rhel/5/rootcheck.agent.template
@@ -494,6 +500,7 @@ ossec/packages_files/agent_installation_scripts/sca/ubuntu/cis_ubuntu22-04.yml
 ossec/packages_files/agent_installation_scripts/sca/windows/
 ossec/packages_files/agent_installation_scripts/sca/windows/cis_win10_enterprise.yml
 ossec/packages_files/agent_installation_scripts/sca/windows/cis_win11_enterprise.yml
+ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2012_non_r2.yml
 ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2012r2.yml
 ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2016.yml
 ossec/packages_files/agent_installation_scripts/sca/windows/cis_win2019.yml

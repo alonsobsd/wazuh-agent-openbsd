@@ -1,6 +1,6 @@
 COMMENT=		Security tool to monitor and check logs and intrusions
 
-V=			4.9.2
+V=			4.10.1
 GH_ACCOUNT=		wazuh
 GH_PROJECT=		wazuh
 GH_TAGNAME=		v${V}
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.wazuh.com
 
 MAINTAINER=		acardenas@bsd-peru.org
 
-SITES.alt=		https://packages.wazuh.com/deps/30/libraries/sources/
+SITES.alt=		https://packages.wazuh.com/deps/35/libraries/sources/
 
 # GPLv2
 PERMIT_PACKAGE=		Yes
